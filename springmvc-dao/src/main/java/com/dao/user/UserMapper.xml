@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.user.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.model.user.User" >
+    <id column="id" property="id"  />
+    <result column="user_name" property="userName"  />
+    <result column="password" property="password"  />
+    <result column="nick_name" property="nickName"  />
+    <result column="address" property="address"  />
+    <result column="telephone" property="telephone"  />
+    <result column="mobile" property="mobile"  />
+    <result column="email" property="email"  />
+    <result column="role_id" property="roleId"  />
+    <result column="status" property="status"  />
+    <result column="create_time" property="createTime" />
+    <result column="update_time" property="updateTime"  />
+    <result column="disabled" property="disabled"  />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_name, password, nick_name, address, telephone, mobile, email, role_id, status, 
+    create_time, update_time, disabled
+  </sql>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id}
+  </select>
+  <delete id="deleteById" parameterType="java.lang.String" >
+    delete from user
+    where id = #{id}
+  </delete>
+  <insert id="insertRecord" parameterType="com.model.user.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="nickName != null" >
+        nick_name,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="telephone != null" >
+        telephone,
+      </if>
+      <if test="mobile != null" >
+        mobile,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="disabled != null" >
+        disabled,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id},
+      </if>
+      <if test="userName != null" >
+        #{userName},
+      </if>
+      <if test="password != null" >
+        #{password},
+      </if>
+      <if test="nickName != null" >
+        #{nickName},
+      </if>
+      <if test="address != null" >
+        #{address},
+      </if>
+      <if test="telephone != null" >
+        #{telephone},
+      </if>
+      <if test="mobile != null" >
+        #{mobile},
+      </if>
+      <if test="email != null" >
+        #{email},
+      </if>
+      <if test="roleId != null" >
+        #{roleId},
+      </if>
+      <if test="status != null" >
+        #{status},
+      </if>
+      <if test="createTime != null" >
+        #{createTime},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime},
+      </if>
+      <if test="disabled != null" >
+        #{disabled},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByRecord" parameterType="com.model.user.User" >
+    update user
+    <set>
+      <if test="userName != null" >
+        user_name = #{userName},
+      </if>
+      <if test="password != null" >
+        password = #{password},
+      </if>
+      <if test="nickName != null" >
+        nick_name = #{nickName},
+      </if>
+      <if test="address != null" >
+        address = #{address},
+      </if>
+      <if test="telephone != null" >
+        telephone = #{telephone},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile},
+      </if>
+      <if test="email != null" >
+        email = #{email},
+      </if>
+      <if test="roleId != null" >
+        role_id = #{roleId},
+      </if>
+      <if test="status != null" >
+        status = #{status},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime},
+      </if>
+      <if test="disabled != null" >
+        disabled = #{disabled},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+</mapper>

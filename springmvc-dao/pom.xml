@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.spring</groupId>
+		<artifactId>springmvc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>springmvc-dao</artifactId>
+	<packaging>jar</packaging>
+	<name>springmvc-dao</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mybatis.version>3.2.8</mybatis.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.spring</groupId>
+			<artifactId>springmvc-model</artifactId>
+			<version>${version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.spring</groupId>
+			<artifactId>springmvc-common</artifactId>
+			<version>${version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
