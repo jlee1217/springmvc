@@ -1,0 +1,49 @@
+* {
+	font-family: "微软雅黑"
+}
+
+.formTable {
+	width:99%;
+	margin: 5px auto 0;
+}
+
+.formTable tr td:nth-child(2n+1){
+	text-align:right;
+}
+.formTable tr td{
+	padding-bottom:10px;
+}
+
+.formTable .validatebox-invalid {
+    background-image: url(../images/red-warn.png);
+}
+.formTable .easyui-validatebox {
+    width: 240px;
+}
+
+.formTable .easyui-numberbox {
+    width: 240px;
+    height: 30px;
+}
+
+input,textarea {
+	font-size: 12px
+}
+
+input[type=radio] {
+	width: 10px;
+	height: 10px
+}
+
+.l-btn-text {
+	margin: 0 10px
+}
+
+.dialog-tool-separator {
+	float: none
+}
+
+parator {
+	float: none;
+}
+

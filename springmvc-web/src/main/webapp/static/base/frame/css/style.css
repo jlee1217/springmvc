@@ -1,0 +1,196 @@
+/* CSS Document */
+/*basic css*/
+*, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+body, ol, ul, h1, h2, h3, h4, h5, div, p, tabel, th, td, dl, dd, form, fieldset, legend, input, textarea, select{
+margin: 0; padding: 0;}
+ul, li, dl, dd, dt {list-style: none;}
+
+body {font-size: 12px; font-family: microsoft YaHei, Tahoma, Arial; text-align: left; background-color: #fff;}
+a {text-decoration: none; cursor: pointer; color: #333;}
+a:hover, a:hover img {text-decoration: none; color: #333;}
+
+
+img {border: 0;}
+input, select, textarea {transition: border 0.2s; font-size: 12px;}
+input[type="button"], input[type="submit"] {cursor: pointer; font-family: microsoft YaHei;}
+textarea {resize: none;}
+
+h1, h2, h3, h4, h5 {font-size: 14px; font-weight: normal;}
+i, em {font-style: normal;}
+.none {display: none;}
+.fl {float: left;}
+.fr {float: right;}
+.tc {text-align: center;}
+.tl {text-align: left;}
+.tr {text-align: right;}
+
+.pad-10 {padding: 10px;}
+.pad-15 {padding: 15px;}
+.pad-20 {padding: 20px;}
+.pad-top-10 {padding-top: 10px;}
+.pad-top-15 {padding-top: 15px;}
+.pad-top-20 {padding-top: 20px;}
+.pad-bot-10 {padding-bottom: 10px;}
+.pad-bot-15 {padding-bottom: 15px;}
+.pad-bot-20 {padding-bottom: 20px;}
+.pad-lr-10 {padding-left: 10px; padding-right: 10px;}
+.pad-lr-15 {padding-left: 15px; padding-right: 15px;}
+.pad-lr-20 {padding-left: 20px; padding-right: 20px;}
+
+.relative {position: relative;}
+
+.crbox:after, .ul-list:after, .clli:after {
+	clear: both; content: "."; display: block; height: 0; visibility: hidden;
+}
+.crbox, .ul-list, .clli {display: inline-block;}
+.crbox, .ul-list, .clli {display: block;}
+.ul-list li {float: left;}
+
+/*=================basic-header css=====================*/
+.basic-header {height: 50px; width: 100%; position: fixed; top: 0; left: 0; z-index: 1000; background-color: #09c;
+line-height: 50px; color: #fff;}
+.basic-header a {color: #fff;}
+.logo a {display: inline-block; font: 14px/50px microsoft YaHei;}
+.logo a img {float: left; height: 50px; width: 50px; margin-right: 10px; background-color: #0087b4;}
+
+.header-load {position: absolute; top: 0; right: 0; height: 50px; border-left: 1px solid #008fbf;}
+.header-load-link {display: inline-block; padding: 0 15px; height: 100%;}
+.header-load-link .iconfont {display: inline-block; transition: transform 0.2s ease 0s;}
+.header-load-link:hover {background-color:  #008fbf;}
+
+.header-load .linkdiv {position: absolute; top: 50px; left: 0; width: 100%; background-color: #fff; border-radius: 0 0 5px 5px;
+box-shadow: 0 2px 2px rgba(50,50,50,0.2); overflow: hidden; display: none;}
+.header-load .linkdiv a {color: #666; display: block; padding: 0 15px; line-height: 40px; height: 40px; white-space: nowrap;}
+.header-load .linkdiv a:hover {color: #333; background-color: #f2f2f2;}
+
+.header-load-active .header-load-link, .header-load-active .header-load-link:hover {color: #333; background-color: #fff; border-bottom: 1px solid #eee;}
+.header-load-active .header-load-link .iconfont {transform: rotate(180deg);}
+.header-load-active .linkdiv {display: block;}
+
+/*=====================basic-body css=====================*/
+.basic-body {position: absolute; top: 50px; bottom: 0; left: 0; width: 100%;}
+.scroll-y-box {height: 100%; width: 100%; overflow-x: hidden; overflow-y: auto;}
+
+/*=left-big-menu=*/
+.left-big-menu {background-color: #293038; color: #fff; height: 100%; position: absolute; top: 0; left: 0; width: 180px; overflow: hidden;}
+.left-big-menu a {color: #fff;}
+.big-menu-switch {height: 30px; text-align: center; background-color: #394555; cursor: pointer;}
+.big-menu-switch .iconfont {font-size: 22px; display: inline-block; color: #ccc;}
+
+.menu-title, .menu-trans li, .small-menu-list a.link, .small-menu-list a.sma-link  {height: 40px; white-space: nowrap; line-height: 40px;}
+.menu-title {background-color: #22282e; padding: 0 17px; cursor: pointer;}
+.menu-title .iconfont {float: left; margin: 12px 5px 0 0; font-size: 8px; line-height: 16px; height: 16px; width: 16px; text-align: center;
+transition: ease 0.1s;}
+.menu-title:hover {background-color: #414d5c;}
+
+.menu-trans li a {display: block; padding: 0 17px; transition: all 0.1s;}
+.menu-trans li .iconfont {float: left; font-size: 16px; margin-right: 17px; color: #aeb9c2;}
+.menu-trans li.active, .menu-trans li.active a:hover {background-color: #09c;}
+.menu-trans li a:hover .iconfont, .menu-trans li.active .iconfont {color: #fff;}
+
+.menu-trans li a:hover {background-color: #37424f;}
+
+.menu-box-active .menu-title {background-color: #37424f; border-bottom: 1px solid #414d5c;}
+.menu-box-active .menu-title:hover {background-color: #414d5c;}
+.menu-box-active .menu-trans {display: none;}
+.menu-box-active .menu-title .iconfont {transform: rotate(-90deg);}
+
+.basic-body-active .left-big-menu {width: 50px;}
+.basic-body-active .basic-right {left: 50px;}
+.basic-body-active .menu-title .iconfont {margin-right: 20px;}
+
+/*===basic-right css===*/
+.basic-right {position: absolute; top: 0; right: 0; left: 180px; height: 100%; overflow: hidden;}
+
+/*=left-small-menu=*/
+.left-small-menu {position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; background-color: #eaedf1; width: 180px;}
+.left-small-menu .tit {height: 70px; color: #333; font: 700 12px/70px microsoft YaHei; padding: 0 20px; overflow: hidden; background-color: #d9dee4;}
+
+.small-menu-list a.link, .small-menu-list a.sma-link {color: #666; display: block; padding: 0 20px 0 30px; position: relative;}
+.small-menu-list a.link {color: #333;}
+.small-menu-list a.link .iconfont {font-size: 10px; position: absolute; top: 11px; left: 10px; width: 16px; height: 16px; line-height: 16px;
+text-align: center;}
+.small-menu-list a.sma-link{padding-left: 40px;}
+.small-menu-list .linkdiv {display: none;}
+.small-menu-list li.menu-showchild .linkdiv {display: block;}
+.small-menu-list li.menu-showchild a.link .iconfont {transform: rotate(90deg); top: 12px;}
+
+.small-menu-list a:hover.link, .small-menu-list a:hover.sma-link {background-color: #f4f6f8;}
+.small-menu-list a.active, .small-menu-list a:hover.active {background-color: #fff;}
+
+
+.sma-menu-switch {position: absolute; top: 50%; left: 160px; width: 20px; height: 50px; margin-top: -25px; cursor: pointer; z-index: 100;
+overflow: hidden;}
+.sma-menu-switch .con {text-align: center; width: 100%; height: 100%; line-height: 46px; position: absolute; top: 0; left: 7px; z-index: 100;
+transition: all 0.1s;}
+.sma-menu-switch .bg {width: 0; height: 50px; position: absolute; top: 0; right: 0; border: 1px solid #f7f7f7; border-width: 9px 13px 9px 0;
+border-color: transparent #f7f7f7;}
+.switch-ico-right {display: none;}
+
+.sma-menu-switch:hover .bg {border-width: 8px 20px 8px 0;}
+.sma-menu-switch:hover .con {left: 0;}
+
+.basic-right-active .switch-ico-left {display: none;}
+.basic-right-active .switch-ico-right {display: block;}
+.basic-right-active .sma-menu-switch {left: 0;}
+.basic-right-active .sma-menu-switch .con {left: -7px;}
+.basic-right-active .sma-menu-switch:hover .con {left: 0;}
+
+.basic-right-active .sma-menu-switch .bg {border: 1px solid #d9dee4; border-width: 9px 0 9px 13px; right: auto; left: 0;
+border-color: transparent #d9dee4;}
+.basic-right-active .sma-menu-switch:hover .bg {border-width: 8px 0 8px 20px;}
+
+.basic-right-active .left-small-menu {width: 0;}
+.basic-right-active .basic-main {left: 0;}
+
+.basic-main {position: absolute; top: 0; left: 0; right: 0; height: 100%;}
+
+/*================from css*===============*/
+.form-fill li {min-height: 30px; padding: 5px 0; position: relative; line-height: 30px;}
+.form-fill .tt {position: absolute; top: 5px; left: 0; width: 100px; text-align: right; white-space: nowrap;}
+.form-fill .con {padding: 0 0 0 110px;}
+
+.textbox-text, .easyui-validatebox {height: 30px; padding: 4px 5px; border: 1px solid #ccc; width: 180px; line-height: 20px;
+background-color: #fcfcfc; vertical-align: baseline; color: #888;}
+.textbox-text:focus, .easyui-validatebox:focus {border-color: #aaa; background-color: #fff; box-shadow: 0 0 2px rgba(50,50,50,0.2); color: #333;}
+textarea.textbox-text {height: 80px; line-height: 18px;}
+
+.form-fill .validatebox-invalid { background-image: url(../images/red-warn.png);}
+.form-fill .textbox-text, .form-fill .easyui-validatebox {width: 240px;}
+
+.datebox {border-color: #ccc; height: 30px !important; position: relative; width: 180px !important;}
+.datebox .textbox-text {width: 100% !important; margin-right: 0 !important; height: 28px; float: left; border: 0;}
+.datebox .textbox-addon {position: absolute; top: 0;}
+.datebox .textbox-addon .textbox-icon { background-color: #fff; padding-top: 5px; height: 28px !important; width: 18px; display: inline-block;}
+
+/*===============info-arrange css=============*/
+.info-arrange {padding: 15px; background-color: #f5f5f5; font: 12px/26px microsoft YaHei;}
+.info-arrange li {width: 25%; padding-right: 10px;}
+
+/*=tab-header-form css=*/
+.tab-header-form {padding: 15px; line-height: 30px;}
+.pad-span {padding-right: 15px; vertical-align: middle; display: inline-block;}
+.tab-header-form .pad-span {vertical-align: middle; padding: 5px 10px 5px 0;}
+.tab-header-form .l-btn {height: 30px; padding: 0 8px 0 5px; line-height: 30px; float: left;}
+.tab-header-form .l-btn-text {line-height: 28px;}
+
+/* extends css */
+.dialog-tool-separator{float: none;}
+/* 自定义遮罩层*/
+body #mask{position: fixed;top: 0;left: 0;right: auto;width: 100%;height: 100%; background: #98AFB3;z-index: 9999;opacity: .5;filter:alpha(opacity=50);}
+body #mask #pbar{margin-top: 22%;margin-left: 50%;}
+body #mask .text{margin-top: 10px;margin-left: 51%;color: #fff;}
+
+
+.datebox {border-color: #ccc; height: 30px !important; position: relative; width: 180px !important;}
+.datebox .textbox-text {width: 100% !important; margin-right: 0 !important; height: 28px; float: left; border: 0;}
+.datebox .textbox-addon {position: absolute; top: 0;}
+.datebox .textbox-addon .textbox-icon { background-color: #fff; padding-top: 5px; height: 28px !important; width: 18px; display: inline-block;}
+
+/*select repair*/
+.select-parent .textbox-text {padding: 0 5px; height: auto; border: 0;}
+.select-parent .combo {position: relative;}
+.select-parent .textbox-addon-right {position: absolute; top: 0; right: 0;}
+.select-parent .textbox-addon-right a {height: 20px !important;}
+

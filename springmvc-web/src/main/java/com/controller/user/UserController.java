@@ -38,7 +38,7 @@ public class UserController extends BaseController<UserController>{
 
 	@RequestMapping("/index")
 	public String index() {
-		return "userForm";
+		return "/user/index";
 	}
 	
 	/**

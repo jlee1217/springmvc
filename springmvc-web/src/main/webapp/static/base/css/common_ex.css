@@ -1,0 +1,17 @@
+@charset "UTF-8"; 
+
+.datagrid-cell a {text-decoration: none; cursor: pointer; color: blue;}
+.datagrid-cell a:hover, .datagrid-cell a:hover img {text-decoration: none; color: blue;}
+
+.datagrid-header .datagrid-cell {
+	height: 24px;
+	padding-top: 2px;
+}
+
+.datagrid-ftable .datagrid-cell, .datagrid-ftable .datagrid-cell-group, .datagrid-ftable .datagrid-header-rownumber, .datagrid-ftable .datagrid-cell-rownumber{
+	height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
