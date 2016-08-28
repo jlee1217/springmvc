@@ -1,11 +1,14 @@
 
 package com.service.user.imp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dao.user.UserMapper;
 import com.model.user.User;
+import com.model.user.UserQo;
 import com.service.user.UserService;
 
 /**
@@ -28,8 +31,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User getUser(String id) {
-
 		return userMapper.selectById(id);
+	}
+
+	@Override
+	public List<User> getUserList(UserQo qo) {
+		return userMapper.getUserList(qo);
 	}
 
 }

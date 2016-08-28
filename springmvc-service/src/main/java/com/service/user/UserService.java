@@ -1,7 +1,10 @@
 
 package com.service.user;
 
+import java.util.List;
+
 import com.model.user.User;
+import com.model.user.UserQo;
 
 /**
  * ClassName: UserService 
@@ -25,4 +28,13 @@ public interface UserService {
 	 * @date 2016年8月24日
 	 */
 	User getUser(String id);
+	
+	/**
+	 * @Description: 得到用户集合
+	 * @param qo
+	 * @return
+	 * @author ljy
+	 * @date 2016年8月28日
+	 */
+	List<User> getUserList(UserQo qo);
 }

@@ -32,27 +32,6 @@
   	<servlet-name>default</servlet-name>
   		<url-pattern>/static/*</url-pattern>
 	</servlet-mapping>
-	<!-- <servlet-mapping> 
-        <servlet-name>default</servlet-name> 
-        <url-pattern>*.css</url-pattern> 
-    </servlet-mapping> 
- 
-    <servlet-mapping> 
-        <servlet-name>default</servlet-name> 
-        <url-pattern>*.gif</url-pattern> 
-    </servlet-mapping> 
- 
-    <servlet-mapping> 
-        <servlet-name>default</servlet-name> 
-        <url-pattern>*.jpg</url-pattern> 
-    </servlet-mapping> 
- 
-    <servlet-mapping> 
-        <servlet-name>default</servlet-name> 
-        <url-pattern>*.js</url-pattern> 
-    </servlet-mapping>
-	 -->
-	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
@@ -62,6 +41,6 @@
 	
 	<!-- 欢迎页面 -->
 	<welcome-file-list>
-		<welcome-file>/WEB-INF/jsp/user/index.jsp</welcome-file>
+		<welcome-file>/WEB-INF/jsp/common/index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

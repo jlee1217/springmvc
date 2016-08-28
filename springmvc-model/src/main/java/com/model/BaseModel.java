@@ -1,5 +1,6 @@
 package com.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,8 +15,13 @@ import java.util.Date;
  *	
  */
  
-public class BaseModel {
+public class BaseModel implements Serializable {
     
+	/**
+	 * @Fields serialVersionUID : 序列化
+	 */
+	private static final long serialVersionUID = -6167257226920909240L;
+
 	/**
 	 * @Fields id : 主键id
 	 */

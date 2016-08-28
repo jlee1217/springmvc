@@ -551,18 +551,18 @@ $.extend($.fn.validatebox.defaults.rules, {
             },
             dateASmallerThanDateB: {//检测开始日期必须小于等于结束日期
             	validator: function (value, param) {
-            		var beginDate=new Date($(param[0]).datetimebox('getValue'));
-            		 var endDate=new Date((value));
+            		var startTime=new Date($(param[0]).datetimebox('getValue'));
+            		 var endTime=new Date((value));
             		 
-            		return endDate!=null&&endDate>=beginDate;
+            		return endTime!=null&&endTime>=startTime;
             	}, 
             	message: '开始日期必须小于等于结束日期' 
             },
            /* sameYear: {//检测开始日期和结束日期必须同年
             	validator: function (value, param) {
-            		var beginDate=new Date($(param[0]).datetimebox('getValue'));
-            		 var endDate=new Date((value));
-            		return beginDate.getFullYear()==endDate.getFullYear();
+            		var startTime=new Date($(param[0]).datetimebox('getValue'));
+            		 var endTime=new Date((value));
+            		return startTime.getFullYear()==endTime.getFullYear();
             	}, 
             	message: '不允许跨年份查询' 
             },*/

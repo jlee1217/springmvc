@@ -16,10 +16,31 @@
     <result column="update_time" property="updateTime"  />
     <result column="disabled" property="disabled"  />
   </resultMap>
+  <!-- 查询字段 -->
   <sql id="Base_Column_List" >
-    id, user_name, password, nick_name, address, telephone, mobile, email, role_id, status, 
-    create_time, update_time, disabled
+    user.id, user.user_name, user.password, user.nick_name, user.address, user.telephone, 
+    user.mobile, user.email, user.role_id, user.status,user.create_time, user.update_time, user.disabled
   </sql>
+  <!-- 查询条件 -->
+  <sql id="Search_Condition">
+  	<if test="userName != null and userName != ''">
+		AND user.user_name = #{userName}
+	</if>
+	<if test="startTime != null ">
+		<![CDATA[
+		AND user.create_time  >  #{startTime}
+		]]>
+	</if>
+	<if test="endTime != null ">
+		<![CDATA[
+		AND user.create_time  <  #{endTime}
+		]]>
+	</if>
+	<if test="status != null ">
+		AND user.status  =  #{status}
+	</if>		
+  </sql>
+  <!-- 通过id得到用户信息 -->
   <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
@@ -157,4 +178,12 @@
     </set>
     where id = #{id}
   </update>
+  <!-- 得到用户集合数据 -->
+  <select id="getUserList" parameterType="com.model.user.User" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List"/>
+	  	from user user
+	  	where user.disabled = 0
+  	<include refid="Search_Condition"/>
+  </select>
 </mapper>

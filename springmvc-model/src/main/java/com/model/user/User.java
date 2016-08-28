@@ -17,6 +17,11 @@ import com.model.BaseModel;
 public class User extends BaseModel{
 
     /**
+	 * @Fields serialVersionUID : 序列化
+	 */
+	private static final long serialVersionUID = -3587617496644977762L;
+
+	/**
      * @Fields userName : 用户名
      */
     private String userName;

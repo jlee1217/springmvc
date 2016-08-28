@@ -36,14 +36,10 @@
     </div><!--end left-big-menu-->
     
     <div class="basic-right">
-        
-        
         <div class="basic-main">
             <div class="scroll-y-box basic-main-content">
-            
 				<!--start内容区 -->
             	<div id="component-content" class="easyui-tabs" fit="true" border="false">
-                	
                     <%--<div title="首页" data-options="closable:false" >--%>
 						<%--<iframe scrolling="auto" frameborder="0"  src="${ctx}/purchase/paymentOrder/index" style="width:100%;height:100%;"></iframe>--%>
                     <%--</div>--%>
@@ -73,7 +69,6 @@
 </html>
 <script type="text/javascript">
 $(function(){
-	
 	//加载一、二级菜单
 	loadLeftMenu();
 	
@@ -89,7 +84,6 @@ $(function(){
 	
 	//左侧大菜单关闭打开
 	collapseLeftMenu();
-	
 	
 	$("#component-content").tabs("resize");
 	//绑定tab页关闭

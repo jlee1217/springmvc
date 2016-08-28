@@ -177,7 +177,18 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-		
+		 <!-- mybatis page plugins begin -->
+        <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>3.7.5</version>
+    </dependency>
+        <!-- general utils begin -->
+        <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.1</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<finalName>springmvc</finalName>
