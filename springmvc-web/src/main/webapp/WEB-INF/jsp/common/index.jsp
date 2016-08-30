@@ -20,7 +20,7 @@
 	</div><!--end logo -->
     
     <div class="header-load">
-    	<a class="header-load-link"><span class="name"><%-- <%=UserUtil.getCurrentUser().getLoginName() %> --%>,您好</span> <i class="iconfont">&#xe606;</i></a>
+    	<a class="header-load-link"><span class="name">${user.nickName},您好</span> <i class="iconfont">&#xe606;</i></a>
         <div class="linkdiv">
         	<a href="${ctx}/logout">退出</a>
         </div><!--end linkdiv -->

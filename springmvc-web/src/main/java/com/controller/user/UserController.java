@@ -14,7 +14,7 @@ import com.BaseController;
 import com.common.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
 import com.model.user.User;
-import com.model.user.UserQo;
+import com.model.user.UserVo;
 import com.service.user.UserService;
 
 /**
@@ -69,10 +69,10 @@ public class UserController extends BaseController<UserController>{
 	 */
 	@RequestMapping(value="getUserlist",method = RequestMethod.POST)
 	@ResponseBody
-	public PageUtils<User> getUserList(UserQo qo){
-		logger.info("UserInfo:"+qo);
-		PageHelper.startPage(qo.getPage(),qo.getRows(), true);
-		List<User> list = userService.getUserList(qo);
+	public PageUtils<User> getUserList(UserVo vo){
+		logger.info("UserInfo:"+vo);
+		PageHelper.startPage(vo.getPage(),vo.getRows(), true);
+		List<User> list = userService.getUserList(vo);
 		PageUtils<User> result=new PageUtils<User>(list);
 		return result;
 	}

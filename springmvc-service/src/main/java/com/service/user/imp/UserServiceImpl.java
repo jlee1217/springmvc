@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.dao.user.UserMapper;
 import com.model.user.User;
-import com.model.user.UserQo;
+import com.model.user.UserVo;
 import com.service.user.UserService;
 
 /**
@@ -35,8 +35,9 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> getUserList(UserQo qo) {
-		return userMapper.getUserList(qo);
+	public List<User> getUserList(UserVo vo) {
+		return userMapper.getUserList(vo);
 	}
+
 
 }

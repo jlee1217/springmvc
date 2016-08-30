@@ -15,7 +15,7 @@ import java.util.Date;
  *
  */
 
-public class UserQo extends User {
+public class UserVo extends User {
 
 	/**
 	 * @Fields serialVersionUID : 序列化

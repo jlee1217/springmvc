@@ -4,7 +4,7 @@ package com.service.user;
 import java.util.List;
 
 import com.model.user.User;
-import com.model.user.UserQo;
+import com.model.user.UserVo;
 
 /**
  * ClassName: UserService 
@@ -36,5 +36,7 @@ public interface UserService {
 	 * @author ljy
 	 * @date 2016年8月28日
 	 */
-	List<User> getUserList(UserQo qo);
+	List<User> getUserList(UserVo vo);
+	
+	
 }

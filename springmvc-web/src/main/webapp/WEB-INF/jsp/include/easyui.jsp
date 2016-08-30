@@ -32,9 +32,4 @@
 <script src="${ctx}/static/common/js/jquery.rotate.min.js"></script>
 
 <script src="${ctx}/static/common/js/fms-common.js"></script>
-<script>
-window.addEventListener('message',function(e){
-			window.onbeforeunload = null;
-            window.location.replace('${ctx}');
-        },false);
-</script>
+
