@@ -37,6 +37,7 @@
 		<!-- 用来检测连接是否有效的sql，要求是一个查询语句 -->
 		<property name="validationQuery" value="${db.validationQuery}" />
 	</bean>
+	
 	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -53,6 +54,9 @@
 	    </array>
 	  </property>
 	</bean>
+	<!-- 加载Spring Shiro 配置文件  -->
+	<import resource="classpath*:spring-shiro-config.xml" />
+	
 	<!-- 默认SessionTemplate -->
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate"
 		scope="prototype">

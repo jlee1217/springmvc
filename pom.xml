@@ -30,6 +30,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<jackson.version>2.4.4</jackson.version>
 		<slf4j.version>1.7.7</slf4j.version>
+		<shiro.version>1.2.2</shiro.version>
 	</properties>
 	<dependencies>
 		<!-- log4j -->
@@ -82,6 +83,7 @@
             <artifactId>spring-aop</artifactId>  
             <version>${spring.version}</version>  
         </dependency>  
+   
         <!-- mysql连接 -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -99,6 +101,37 @@
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis-spring</artifactId>
 		    <version>1.2.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+		<dependency>
+		    <groupId>commons-beanutils</groupId>
+		    <artifactId>commons-beanutils</artifactId>
+		    <version>1.8.1</version>
+		</dependency>
+		<dependency>  
+		    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-core</artifactId>  
+		    <version>1.2.0</version>  
+		</dependency> 
+		<dependency>  
+	    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-web</artifactId>  
+		    <version>1.2.0</version>  
+		</dependency>  
+		<dependency>  
+		    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-ehcache</artifactId>  
+		    <version>1.2.0</version>  
+		</dependency>
+		<dependency>  
+		    <groupId>org.apache.shiro</groupId>  
+		    <artifactId>shiro-spring</artifactId>  
+		    <version>1.2.0</version>  
+		</dependency>
+		<dependency>  
+		    <groupId>org.slf4j</groupId>  
+		    <artifactId>slf4j-jdk14</artifactId>  
+		    <version>1.6.4</version>  
 		</dependency>
 		<!-- 数据源 -->
 		<dependency>
