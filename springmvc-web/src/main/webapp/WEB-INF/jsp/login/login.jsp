@@ -60,7 +60,7 @@
 		<div class="" style="position: absolute; top: 175px; left: 560px;" >
 			
 		</div>
-		<form id="fm1" action="${ctx}/login/login" method="post" >
+		<form id="fm1" action="${ctx}/login" method="post" >
 		<div class="Logins_div" >
 			<div id="d">
 				<div id="div1" name="dv" >
@@ -80,6 +80,8 @@
 						<input class="Login_btn" value="重　　置" type="reset" />
 		        	</p>
 				</div>
+				 <%--用于输入后台返回的验证错误信息 --%>  
+    <P><c:out value="${message }" /></P>  
 				</div>
 		
 		</div>
